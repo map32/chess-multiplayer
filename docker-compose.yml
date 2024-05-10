@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 services:
   postgres:
     image: postgres:14
@@ -8,4 +9,16 @@ services:
     ports:
       - "5432:5432"
     volumes:
+=======
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB}
+    ports:
+      - "5432:5432"
+    volumes:
+>>>>>>> 312561d3a398f0f5b0d2f3028f0fa93e491a3d2c
       - ./initialize.sql:/docker-entrypoint-initdb.d/init.sql
